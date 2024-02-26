@@ -20,7 +20,7 @@ export default function About() {
             });
             setBtnText("Enable white mode");
         }
-        else{
+        else {
             setMyStyle({
                 color: 'black',
                 backgroundColor: 'white'
@@ -33,7 +33,7 @@ export default function About() {
     return (
         <div className='container my-5' style={myStyle}>
             <h2>
-                About us 
+                About us
             </h2>
             <div className="accordion" id="accordionExample">
                 <div className="accordion-item">

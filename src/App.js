@@ -24,8 +24,8 @@ function App() {
   }
 
 
-  const changeMode = () => {
-    if (mode === 'light') {
+  const changeMode = (event) => {
+    if (event.target.checked) {
       setMode("dark");
       document.body.style.backgroundColor = 'gray';
       showAlert("Enable dark mode", 'success')
@@ -37,8 +37,8 @@ function App() {
     }
   }
 
-  const changeModeInGreen = () => {
-    if (mode === 'light') {
+  const changeModeInGreen = (event) => {
+    if (event.target.checked) {
       setMode("green");
       document.body.style.backgroundColor = 'green';
       showAlert("Enable green mode", 'success')
@@ -53,7 +53,6 @@ function App() {
   const router = createBrowserRouter([
     {
       path: '/',
-      // element: <TextForm />
       element: <TextForm showAlert={showAlert} heading="Enter the text you analyze below" mode={mode} />,
       errorElement: <NotFoundPage />
     },
